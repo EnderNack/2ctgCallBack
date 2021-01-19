@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=devide-width, initial-scale=1">
+	<title>CallBack - Ćwiczenie nr 1</title>
+</head>
+<body>
+	<div id="wynik">
+		
+	</div>
+
+	<div>
+		<script type="text/javascript">
+			function funkcjaA(){
+				//setTimeout(()=>{},1000);
+				//setTimeout(function(){});
+				setTimeout(()=>{
+					return document.getElementById("wynik").innerHTML += "<br>2: Lubi programować";
+				},1000);
+			}
+				function funkcjaB(CallBack){
+					document.getElementById("wynik").innerHTML += "<br>1: 2CTG";
+					CallBack();
+				}
+			
+
+				const a = funkcjaA();
+				funkcjaB(a);
+		</script>
+	</div>
+</body>
+</html>
